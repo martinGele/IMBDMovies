@@ -23,7 +23,7 @@ This project is part of my learning journey during my internship. It is an Andro
 - **Architecture**: MVVM (Model-View-ViewModel)
 - **Networking**: Retrofit for API calls
 - **Dependency Injection**: Hilt
-- **JSON Parsing**: Moshi
+- **JSON Parsing**: GSON
 - **UI**: Jetpack Compose for UI components
 
 ## Installation
