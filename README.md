@@ -30,7 +30,7 @@ This project is part of my learning journey during my internship. It is an Andro
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/yourusername/yourprojectname.git
+    git clone https://github.com/martinGele/IMBDMovies.git
     ```
 2. Open the project in Android Studio.
 3. Add your IMDb API key to the `local.properties` file:
