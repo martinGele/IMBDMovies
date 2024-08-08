@@ -12,7 +12,7 @@ This project is part of my learning journey during my internship. It is an Andro
 
 - **Search Movies**: Search for movies using the IMDb API.
 - **Movie Details**: View detailed information about selected movies, including synopsis, ratings, and cast.
-- **Favorites**: Mark movies as favorites for easy access.
+- **Favorites**: Mark movies as favourites for easy access.
 - **Responsive UI**: Optimized for different screen sizes.
 
 ## Tech Stack
@@ -44,7 +44,7 @@ This project is part of my learning journey during my internship. It is an Andro
 1. Launch the app.
 2. Use the search bar to find movies by title.
 3. Tap on a movie to view its details.
-4. Mark movies as favorites by tapping the favorite icon.
+4. Mark movies as favourites by tapping the favourite icon.
 
 ## Learning Objectives
 
@@ -56,10 +56,6 @@ This project is part of my learning journey during my internship. It is an Andro
 ## Contributing
 
 Contributions are welcome! If you find a bug or want to add a feature, feel free to open an issue or submit a pull request.
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 ## Acknowledgments
 
