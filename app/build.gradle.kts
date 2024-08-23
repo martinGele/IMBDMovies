@@ -1,6 +1,8 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
+    alias(libs.plugins.hilt.di)
+    id("kotlin-kapt")
 }
 
 android {
@@ -77,4 +79,22 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+
+    implementation(libs.androidx.core.ktx)
+    implementation(libs.androidx.appcompat)
+    testImplementation(libs.junit)
+    androidTestImplementation(libs.androidx.junit)
+
+    implementation(libs.retrofit)
+    implementation(libs.okhttp)
+    implementation(libs.okhttp.tls)
+    implementation(libs.okhttp.interceptor)
+    implementation(libs.moshi)
+    kapt(libs.moshi.codegen)
+    implementation(libs.retrofit.moshi)
+    implementation(libs.hilt.android)
+    kapt(libs.hilt.compiler)
+    implementation(libs.slack.eithernet)
+    implementation(libs.androidx.hilt.navigation.compose)
+
 }
