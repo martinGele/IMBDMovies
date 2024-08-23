@@ -1,7 +1,7 @@
 package com.martin.myapplication.data.remote.api
 
-import com.martin.favoritemovies.api.models.MovieDetails
 import com.martin.myapplication.data.remote.model.GeneralError
+import com.martin.myapplication.data.remote.model.MovieDetails
 import com.martin.myapplication.data.remote.model.TopRatedMovies
 import com.slack.eithernet.ApiResult
 import retrofit2.http.GET

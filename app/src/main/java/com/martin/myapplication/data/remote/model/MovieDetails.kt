@@ -1,52 +1,111 @@
-package com.martin.favoritemovies.api.models
+package com.martin.myapplication.data.remote.model
 
+
+import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
+
+@JsonClass(generateAdapter = true)
 data class MovieDetails(
+    @Json(name = "adult")
     val adult: Boolean,
-    val backdrop_path: String,
-    val belongs_to_collection: Any,
+    @Json(name = "backdrop_path")
+    val backdropPath: String,
+    @Json(name = "belongs_to_collection")
+    val belongsToCollection: BelongsToCollection,
+    @Json(name = "budget")
     val budget: Int,
+    @Json(name = "genres")
     val genres: List<Genre>,
+    @Json(name = "homepage")
     val homepage: String,
+    @Json(name = "id")
     val id: Int,
-    val imdb_id: String,
-    val original_language: String,
-    val original_title: String,
+    @Json(name = "imdb_id")
+    val imdbId: String,
+    @Json(name = "origin_country")
+    val originCountry: List<String>,
+    @Json(name = "original_language")
+    val originalLanguage: String,
+    @Json(name = "original_title")
+    val originalTitle: String,
+    @Json(name = "overview")
     val overview: String,
+    @Json(name = "popularity")
     val popularity: Double,
-    val poster_path: String,
-    val production_companies: List<ProductionCompany>,
-    val production_countries: List<ProductionCountry>,
-    val release_date: String,
+    @Json(name = "poster_path")
+    val posterPath: String,
+    @Json(name = "production_companies")
+    val productionCompanies: List<ProductionCompany>,
+    @Json(name = "production_countries")
+    val productionCountries: List<ProductionCountry>,
+    @Json(name = "release_date")
+    val releaseDate: String,
+    @Json(name = "revenue")
     val revenue: Int,
+    @Json(name = "runtime")
     val runtime: Int,
-    val spoken_languages: List<SpokenLanguage>,
+    @Json(name = "spoken_languages")
+    val spokenLanguages: List<SpokenLanguage>,
+    @Json(name = "status")
     val status: String,
+    @Json(name = "tagline")
     val tagline: String,
+    @Json(name = "title")
     val title: String,
+    @Json(name = "video")
     val video: Boolean,
-    val vote_average: Double,
-    val vote_count: Int
+    @Json(name = "vote_average")
+    val voteAverage: Double,
+    @Json(name = "vote_count")
+    val voteCount: Int
 ) {
-    data class Genre(
+    @JsonClass(generateAdapter = true)
+    data class BelongsToCollection(
+        @Json(name = "backdrop_path")
+        val backdropPath: String,
+        @Json(name = "id")
         val id: Int,
-        val name: String
-    )
-
-    data class ProductionCompany(
-        val id: Int,
-        val logo_path: String,
+        @Json(name = "name")
         val name: String,
-        val origin_country: String
+        @Json(name = "poster_path")
+        val posterPath: String
     )
 
-    data class ProductionCountry(
-        val iso_3166_1: String,
+    @JsonClass(generateAdapter = true)
+    data class Genre(
+        @Json(name = "id")
+        val id: Int,
+        @Json(name = "name")
         val name: String
     )
 
+    @JsonClass(generateAdapter = true)
+    data class ProductionCompany(
+        @Json(name = "id")
+        val id: Int,
+        @Json(name = "logo_path")
+        val logoPath: String,
+        @Json(name = "name")
+        val name: String,
+        @Json(name = "origin_country")
+        val originCountry: String
+    )
+
+    @JsonClass(generateAdapter = true)
+    data class ProductionCountry(
+        @Json(name = "iso_3166_1")
+        val iso31661: String,
+        @Json(name = "name")
+        val name: String
+    )
+
+    @JsonClass(generateAdapter = true)
     data class SpokenLanguage(
-        val english_name: String,
-        val iso_639_1: String,
+        @Json(name = "english_name")
+        val englishName: String,
+        @Json(name = "iso_639_1")
+        val iso6391: String,
+        @Json(name = "name")
         val name: String
     )
 }
