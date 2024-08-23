@@ -21,7 +21,8 @@ class MoviesRepository @Inject constructor(private val moviesApi: MoviesApi) {
             is Failure -> when (result) {
                 is NetworkFailure -> TopRatedMoviesResult.Error(result.error)
                 is UnknownFailure -> TopRatedMoviesResult.Error(result.error)
-                else -> TopRatedMoviesResult.Error(IOException("Unknown error"))
+                is Failure.ApiFailure -> TopRatedMoviesResult.ApiError(result.error?.statusMessage)
+                is Failure.HttpFailure -> TopRatedMoviesResult.ApiError(result.error?.statusMessage)
             }
         }
         emit(topRatedMoviesResult)
